@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dylan-thinnes/supersimpleauth.git"
+    "url": "git+https://github.com/dylan-thinnes/verysimpleauth.git"
   },
   "author": "Dylan Thinnes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dylan-thinnes/supersimpleauth/issues"
+    "url": "https://github.com/dylan-thinnes/verysimpleauth/issues"
   },
-  "homepage": "https://github.com/dylan-thinnes/supersimpleauth#readme",
+  "homepage": "https://github.com/dylan-thinnes/verysimpleauth#readme",
   "dependencies": {
     "abstractdb": "^0.1.0",
     "better-sqlite3": "^4.1.0",
