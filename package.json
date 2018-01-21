@@ -1,5 +1,5 @@
 {
-  "name": "supersimpleauth",
+  "name": "verysimpleauth",
   "version": "0.9.0",
   "description": "A simple session authentication library using abstractdb for storage.",
   "main": "index.js",
@@ -20,5 +20,6 @@
     "abstractdb": "^0.1.0",
     "better-sqlite3": "^4.1.0",
     "sqlite3": "^3.1.13"
-  }
+  },
+  "devDependencies": {}
 }
