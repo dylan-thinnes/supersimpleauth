@@ -1,0 +1,24 @@
+{
+  "name": "supersimpleauth",
+  "version": "0.9.0",
+  "description": "A simple session authentication library using abstractdb for storage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylan-thinnes/supersimpleauth.git"
+  },
+  "author": "Dylan Thinnes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dylan-thinnes/supersimpleauth/issues"
+  },
+  "homepage": "https://github.com/dylan-thinnes/supersimpleauth#readme",
+  "dependencies": {
+    "abstractdb": "^0.1.0",
+    "better-sqlite3": "^4.1.0",
+    "sqlite3": "^3.1.13"
+  }
+}
