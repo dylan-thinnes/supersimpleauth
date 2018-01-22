@@ -166,10 +166,10 @@ Auth.prototype.authenticateSession = async function (req, res, next) {
     return true;
 }
 Auth.prototype.isSession = async function (username, token) {
-    var result = this.db.aGet("SELECT username FROM sessions WHERE token=$token AND username=$username", {
+    var result = await this.db.aGet("SELECT username FROM sessions WHERE token=$token AND username=$username", {
         $username: username,
         $token: token
     });
-    if (result) return true;
-    else return false;
+    if (result == undefined) return false;
+    else return true;
 }
