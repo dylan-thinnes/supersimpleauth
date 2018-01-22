@@ -5,16 +5,16 @@ isSession returns a Promise which resolves if the username and sessionToken are 
 */
 var crypto = require("crypto");
 var abstractdb = require("abstractdb");
-var Auth = function (databaseType) {
-    if (databaseType === "sqlite") this.Database = abstractdb("better-sqlite3");
-    else if (databaseType == undefined) this.Database = abstractdb("better-sqlite3");
+var Auth = function (databaseType, path, options) {
+    if (databaseType === "sqlite") Database = abstractdb("better-sqlite3");
+    else if (databaseType == undefined) Database = abstractdb("better-sqlite3");
     else throw "Unrecognized database type passed.";
+    this.db = new Database(path, options);
 }
 module.exports = Auth;
 
-Auth.prototype.init = function (path, options) {
-    //Define databases
-    this.db = new this.Database(path, options);
+Auth.prototype.init = function () {
+    //Define tables
     this.db.sRun("CREATE TABLE sessions (username STRING, token STRING, timestamp INTEGER)");
     this.db.sRun("CREATE TABLE auth (username STRING PRIMARY KEY, salt STRING, key STRING, inviteAllowed INTEGER)");
     this.db.sRun("CREATE TABLE invites (issuer STRING, code STRING)");

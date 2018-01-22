@@ -1,6 +1,6 @@
 (async function () {
     var Auth = require("./index.js");
-    var auth = new Auth("sqlite");
+    var auth = new Auth("sqlite", "memory.db", { memory: true });
     var sampleUsername1 = "mark";
     var samplePassword1 = "1234";
     var sampleUsername2 = "jake";
@@ -59,7 +59,7 @@
     await auth.db.aRun("CREATE TABLE invites (issuer STRING, code STRING)");
     await auth.db.aRun("CREATE TABLE sessions (username STRING, token STRING, timestamp INTEGER)");
     */
-    auth.init("memory1.db", { memory: true });
+    auth.init();
 
     //Make a sample request for password authentication. Fails because auth database is currently empty.
     req = { body: { password: samplePassword1, username: sampleUsername1 } }

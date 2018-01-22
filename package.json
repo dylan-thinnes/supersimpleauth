@@ -1,6 +1,6 @@
 {
   "name": "verysimpleauth",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "A simple session authentication library using abstractdb for storage.",
   "main": "index.js",
   "scripts": {
